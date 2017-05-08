@@ -10,7 +10,9 @@ var userController = require('./controller/user');
 app.use(bodyParser.json());
 app.use('/user',userController);
 
-app.listen(3003,function(){
-	console.log('Server running on 3003');
+var port = (process.env.PORT || 3003);
+
+app.listen(port,function(){
+	console.log('Server running on -- '+port);
 	console.log('accepting client requests!!');
 });
