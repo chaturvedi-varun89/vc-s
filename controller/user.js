@@ -15,7 +15,7 @@ router.post('/addNumber',function (req,res) {
 });
 
 router.get('/getNumbers', function (req, res) {
-    userModal.find({number:10}).then(function(_users){
+    userModal.find({}).then(function(_users){
         res.jsonp({'message':'Success',object:_users});
     })
 
