@@ -12,4 +12,5 @@ app.use('/user',userController);
 
 app.listen(3003,function(){
 	console.log('Server running on 3003');
+	console.log('accepting client requests!!');
 });
