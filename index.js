@@ -6,9 +6,11 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://varun:varun@ds133251.mlab.com:33251/our-db');
 
 var userController = require('./controller/user');
+var quotationsController = require('./controller/quotations');
 
 app.use(bodyParser.json());
 app.use('/user',userController);
+app.use('/quotations',quotationsController);
 
 var port = (process.env.PORT || 3003);
 
